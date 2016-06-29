@@ -1,0 +1,15 @@
+current directory: /Users/Eve/lighthouse/week6/weathermania/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+/Users/Eve/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160629-25655-8w2kgh.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Eve/lighthouse/week6/weathermania/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/Eve/lighthouse/week6/weathermania/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/Eve/lighthouse/week6/weathermania/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20160629-25655-irr5la
