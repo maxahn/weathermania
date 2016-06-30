@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  root 'statics#index'
+ # post '/', to: 'api#test' 
+  post '/test', to: 'api#test' 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

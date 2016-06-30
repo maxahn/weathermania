@@ -1,0 +1,18 @@
+<h1>Statics#index</h1>
+<p>Find me in app/views/statics/index.html.erb</p>
+<div>
+  <!-- <form method="POST" action='/test'> -->
+  <!--   <input name="city"/> -->
+  <!--   <input type='submit'/> -->
+  <!-- </form> -->
+  <%=form_tag ('/test') do %>
+    <%= text_field_tag :query, nil, placeholder: 'Search city'%><br>
+    <%=button_tag(type:'submit', class: 'btn btn-primary') do%>
+      <i class='icon-ok icon-white'></i> Search
+    <%end%>
+  <%end%>
+
+</div>
+
+<div class='weather' data-city=<%=params[:query].to_s%>>
+</div>

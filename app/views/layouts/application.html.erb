@@ -4,11 +4,34 @@
   <title>Weathermania</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <script>
+    jQuery(document).ready(function($) {
+      var city_search = $('.weather').data('city');
+      var search_results;    
+      $.ajax({
+        url :'http://autocomplete.wunderground.com/aq?cb=call=?',
+        dataType : "jsonp",
+        data : {'query': city_search},
+        success : function(parsed_json) {
+          // var location = parsed_json['location']['city'];
+          // var temp_f = parsed_json['current_observation']['temp_f'];
+          // alert("Current temperature in " + location + " is: " + temp_f);
+        for (i = parsed_json.length - 1; i >= 0; i--) {
+          city_result = parsed_json[i];
+          console.log(city_result);
+        }
+        },
+        error : function() {
+        }
+      });
+      
+        // $('<p>').text(search_results).appendTo('.weather');
+    });
+  </script>
 <%= yield %>
-
 </body>
 </html>
